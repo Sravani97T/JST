@@ -1,0 +1,319 @@
+/* Sidebar.css */
+/* .ant-layout-sider {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .ant-menu-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+
+  /* For mobile view */
+@media (max-width: 768px) {
+   /* .ant-layout-sider {
+    width: 80px !important; 
+  }  */
+
+  /* .ant-menu-inline {
+    display: none; 
+  } */
+}
+.ant-card .ant-card-body {
+  padding: 13px !important;
+}
+
+
+
+
+
+
+.custom-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar by default for Firefox */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Reduce the scrollbar width */
+  height: 6px; /* Reduce the scrollbar height for horizontal scrolling */
+  display: none; /* Initially hide the scrollbar */
+}
+
+.custom-scrollbar:hover {
+  scrollbar-width: thin; /* Show thin scrollbar for Firefox on hover */
+  scrollbar-color: rgb(218, 227, 250) transparent; /* Grey thumb with transparent track for Firefox */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar {
+  width: 2px; /* Visible thin scrollbar when hovering */
+  height: 6px; /* Visible thin horizontal scrollbar */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track when visible */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: lightgray; /* Grey thumb color */
+  border-radius: 10px; /* Fully rounded corners for thumb (circle ends) */
+  min-height: 20px; /* Ensure thumb is not too small */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+  background-color: lightgray; /* Darker grey on hover */
+}
+.ant-form-item {
+  margin-bottom: 0px !important;
+}
+/* taggeneration */
+/* CSS for the responsive card layout */
+
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 120px; /* Ensuring minimum width */
+}
+
+/* Ensure text stays on the same line inside each card-item */
+.card-item .ant-typography {
+  margin: 0 !important; /* Remove default margins */
+}
+
+/* For mobile screens, adjust the flex layout */
+@media (max-width: 767px) {
+  .card-content {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: space-around; /* Adjust space for better alignment */
+  }
+
+  .card-item {
+      flex: 1 1 100%; /* Each item will take full width */
+      min-width: auto; /* No min-width to allow proper wrapping */
+      padding: 2px !important;
+
+  }
+}
+.card-item {
+ 
+  padding: 8px !important;
+
+}
+
+/* For tablets and larger screens, maintain the layout as-is */
+@media (min-width: 768px) {
+  .card-content {
+      flex-wrap: nowrap; /* Keep items in one row */
+  }
+}
+/* product detailes */
+.product-details-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .product-details-grid {
+      grid-template-columns: 1fr; /* Stack items in one column for smaller screens */
+      gap: 10px;
+  }
+}
+/* tag genration  */
+/* Global Styles for TagGeneration */
+.tag-generation-columns .card-item {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .tag-generation-columns .card-item {
+      display: block;
+      width: 100%;
+      text-align: left; /* Keep text left aligned in larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .tag-generation-columns .card-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+  }
+  .ant-row {
+      margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .tag-generation-columns .card-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+  }
+  .ant-row {
+      margin-left: 0 !important;
+  }
+}
+.ant-table-thead > tr > th {
+  background-color: #e9e9e9 !important;
+}
+/* Custom scrollbar for the table */
+.custom-scroll .ant-table-body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #c1c1c1 transparent;
+}
+
+.custom-scroll .ant-table-body::-webkit-scrollbar {
+  width: 5px; /* Thin scrollbar */
+  height: 5px;
+}
+
+.custom-scroll .ant-table-body::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.custom-scroll .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+.custom-scroll .ant-table-body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+.ant-table-wrapper .ant-table.ant-table-small .ant-table-tbody>tr>td{
+  padding: 1px 8px !important;
+}
+.ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item
+{
+  height: 66% !important;
+}
+/* table reports */
+
+.filter-container {
+  padding: 16px;
+  background: linear-gradient(135deg, #96bbf6, #4e73df);
+  border-radius: 8px;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-section .ant-select,
+.filter-section .ant-input-number,
+.filter-section .ant-picker {
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 120px;
+}
+
+.filter-section .ant-select:hover,
+.filter-section .ant-input-number:hover,
+.filter-section .ant-picker:hover {
+  border-color: #40a9ff;
+}
+
+.custom-table .ant-table-thead > tr > th,
+.custom-table .ant-table-tbody > tr > td {
+  font-size: 12px;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+/* .custom-table .ant-table-tbody > tr > td {
+  padding: 8px;
+} */
+
+.custom-table .ant-table-tbody > tr:hover > td {
+  background-color: #e6f7ff;
+}
+
+.custom-table .ant-table {
+  border-radius: 8px;
+}
+
+.custom-table .ant-table-wrapper {
+  overflow-x: auto;
+}
+
+.custom-table .ant-table-wrapper::-webkit-scrollbar {
+  height: 2px; /* Decreased height of the scrollbar */
+}
+
+.custom-table .ant-table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 2px;
+}
+
+.custom-table .ant-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #bfbfbf;
+}
+.table-responsive {
+  overflow: auto;
+  scrollbar-width: none; /* Hide scrollbar by default for Firefox */
+}
+
+.table-responsive::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; /* Ensure scrollbar is hidden initially */
+  display: none; /* Initially hide the scrollbar */
+}
+
+.table-responsive:hover {
+  scrollbar-width: thin; /* Show thin scrollbar for Firefox on hover */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track color for Firefox */
+}
+
+.table-responsive:hover::-webkit-scrollbar {
+  display: block; /* Show scrollbar on hover */
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.scroll-horizontal {
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  margin: 0 auto;
+  scrollbar-width: none; /* Hide scrollbar by default for Firefox */
+}
+
+.scroll-horizontal::-webkit-scrollbar {
+  height: 4px;
+  display: none; /* Initially hide the scrollbar */
+}
+
+.scroll-horizontal:hover {
+  scrollbar-width: thin; /* Show thin scrollbar for Firefox on hover */
+  scrollbar-color: #d1cdcd #f1f1f1; /* Thumb and track color for Firefox */
+}
+
+.scroll-horizontal:hover::-webkit-scrollbar {
+  display: block; /* Show scrollbar on hover */
+}
+
+.scroll-horizontal::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scroll-horizontal::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
